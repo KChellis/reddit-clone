@@ -1,3 +1,6 @@
-<p>
-  post-details works!
-</p>
+<h3>{{(post | async)?.title}}</h3>
+<h4>{{(post | async)?.category}}</h4>
+<h5>By {{(post | async)?.user}}</h5>
+<p>{{(post | async)?.body}}</p>
+<button (click)="editPost(post)">Edit</button>
+<app-post-edit></app-post-edit>
